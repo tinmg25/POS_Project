@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_sale"
+            android:icon="@drawable/ic_menu_sale"
+            android:title="@string/menu_sale" />
+        <item
+            android:id="@+id/nav_purchase"
+            android:icon="@drawable/ic_menu_purchase"
+            android:title="@string/menu_purchase" />
+        <item
+            android:id="@+id/nav_stockstatus"
+            android:icon="@drawable/ic_menu_stockstatus"
+            android:title="@string/menu_stockstatus" />
+        <item
+            android:id="@+id/nav_stock"
+            android:icon="@drawable/ic_launcher_background"
+            android:title="@string/menu_stock"/>
+        <item
+            android:id="@+id/supplierFragment"
+            android:icon="@drawable/ic_launcher_background"
+            android:title="Supplier/Customer"/>
+    </group>
+</menu>

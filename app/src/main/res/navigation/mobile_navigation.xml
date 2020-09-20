@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_sale">
+
+    <fragment
+        android:id="@+id/nav_sale"
+        android:name="com.tmw.mypos.ui.Sale.SaleFragment"
+        android:label="@string/menu_sale"
+        tools:layout="@layout/fragment_sale" >
+        <action
+            android:id="@+id/action_nav_sale_to_newSaleFragment"
+            app:destination="@id/newSaleFragment" />
+        <action
+            android:id="@+id/action_nav_sale_to_updateSaleFragment"
+            app:destination="@id/updateSaleFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_purchase"
+        android:name="com.tmw.mypos.ui.Purchase.PurchaseFragment"
+        android:label="@string/menu_purchase"
+        tools:layout="@layout/fragment_purchase" >
+        <action
+            android:id="@+id/action_nav_purchase_to_newPurchaseFragment"
+            app:destination="@id/newPurchaseFragment" />
+        <action
+            android:id="@+id/action_nav_purchase_to_updatePurchaseFragment"
+            app:destination="@id/updatePurchaseFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_stockstatus"
+        android:name="com.tmw.mypos.ui.StockStatus.StockStatusFragment"
+        android:label="@string/menu_stockstatus"
+        tools:layout="@layout/fragment_stock_status" />
+
+    <fragment
+        android:id="@+id/nav_stock"
+        android:name="com.tmw.mypos.ui.Stock.StockFragment"
+        android:label="@string/menu_stock"
+        tools:layout="@layout/fragment_stock" >
+        <action
+            android:id="@+id/action_nav_stock_to_newStockFragment2"
+            app:destination="@id/newStockFragment2" />
+        <action
+            android:id="@+id/action_nav_stock_to_updateStockFragment"
+            app:destination="@id/updateStockFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/newStockFragment2"
+        android:name="com.tmw.mypos.ui.Stock.NewStockFragment"
+        android:label="@string/menu_new_stock"
+        tools:layout="@layout/fragment_new_stock" >
+        <argument
+            android:name="message"
+            app:argType="string"
+            android:defaultValue="default" />
+        <action
+            android:id="@+id/action_newStockFragment2_to_nav_stock"
+            app:destination="@id/nav_stock" />
+    </fragment>
+    <fragment
+        android:id="@+id/updateStockFragment"
+        android:name="com.tmw.mypos.ui.Stock.UpdateStockFragment"
+        android:label="Update Stock"
+        tools:layout="@layout/fragment_update_stock" >
+        <action
+            android:id="@+id/action_updateStockFragment_to_nav_stock"
+            app:destination="@id/nav_stock" />
+        <argument
+            android:name="currentStock"
+            app:argType="com.tmw.mypos.model.Stock" />
+    </fragment>
+    <fragment
+        android:id="@+id/supplierFragment"
+        android:name="com.tmw.mypos.ui.Supplier.SupplierFragment"
+        android:label="Supplier"
+        tools:layout="@layout/fragment_supplier" >
+        <action
+            android:id="@+id/action_supplierFragment_to_newSupplierFragment"
+            app:destination="@id/newSupplierFragment" />
+        <action
+            android:id="@+id/action_supplierFragment_to_updateSupplierFragment3"
+            app:destination="@id/updateSupplierFragment3" />
+        <action
+            android:id="@+id/action_supplierFragment_to_customerFragment2"
+            app:destination="@id/customerFragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/newSupplierFragment"
+        android:name="com.tmw.mypos.ui.Supplier.NewSupplierFragment"
+        android:label="New Supplier"
+        tools:layout="@layout/fragment_new_supplier" >
+        <action
+            android:id="@+id/action_newSupplierFragment_to_supplierFragment"
+            app:destination="@id/supplierFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/updateSupplierFragment3"
+        android:name="com.tmw.mypos.ui.Supplier.UpdateSupplierFragment"
+        android:label="Update Supplier"
+        tools:layout="@layout/fragment_update_supplier" >
+        <action
+            android:id="@+id/action_updateSupplierFragment3_to_supplierFragment"
+            app:destination="@id/supplierFragment" />
+        <argument
+            android:name="currentSupplier"
+            app:argType="com.tmw.mypos.model.Supplier" />
+    </fragment>
+    <fragment
+        android:id="@+id/customerFragment2"
+        android:name="com.tmw.mypos.ui.Customer.CustomerFragment"
+        android:label="Customer"
+        tools:layout="@layout/fragment_customer" >
+        <action
+            android:id="@+id/action_customerFragment2_to_newCustomerFragment"
+            app:destination="@id/newCustomerFragment" />
+        <action
+            android:id="@+id/action_customerFragment2_to_updateCustomerFragment"
+            app:destination="@id/updateCustomerFragment" />
+        <action
+            android:id="@+id/action_customerFragment2_to_supplierFragment"
+            app:destination="@id/supplierFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/newCustomerFragment"
+        android:name="com.tmw.mypos.ui.Customer.NewCustomerFragment"
+        android:label="New Customer"
+        tools:layout="@layout/fragment_new_customer" >
+        <action
+            android:id="@+id/action_newCustomerFragment_to_customerFragment2"
+            app:destination="@id/customerFragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/updateCustomerFragment"
+        android:name="com.tmw.mypos.ui.Customer.UpdateCustomerFragment"
+        android:label="Update Customer"
+        tools:layout="@layout/fragment_update_customer" >
+        <action
+            android:id="@+id/action_updateCustomerFragment_to_customerFragment2"
+            app:destination="@id/customerFragment2" />
+        <argument
+            android:name="currentCustomer"
+            app:argType="com.tmw.mypos.model.Customer" />
+    </fragment>
+    <fragment
+        android:id="@+id/newSaleFragment"
+        android:name="com.tmw.mypos.ui.Sale.NewSaleFragment"
+        android:label="New Sale Voucher"
+        tools:layout="@layout/fragment_new_sale" >
+        <action
+            android:id="@+id/action_newSaleFragment_to_nav_sale"
+            app:destination="@id/nav_sale" />
+    </fragment>
+    <fragment
+        android:id="@+id/updateSaleFragment"
+        android:name="com.tmw.mypos.ui.Sale.UpdateSaleFragment"
+        android:label="Update Sale Voucher"
+        tools:layout="@layout/fragment_update_sale" >
+        <action
+            android:id="@+id/action_updateSaleFragment_to_nav_sale"
+            app:destination="@id/nav_sale" />
+        <argument
+            android:name="currentSale"
+            app:argType="com.tmw.mypos.model.Sale" />
+    </fragment>
+    <fragment
+        android:id="@+id/newPurchaseFragment"
+        android:name="com.tmw.mypos.ui.Purchase.NewPurchaseFragment"
+        android:label="New Purchase Voucher"
+        tools:layout="@layout/fragment_new_purchase" >
+        <action
+            android:id="@+id/action_newPurchaseFragment_to_nav_purchase"
+            app:destination="@id/nav_purchase" />
+    </fragment>
+    <fragment
+        android:id="@+id/updatePurchaseFragment"
+        android:name="com.tmw.mypos.ui.Purchase.UpdatePurchaseFragment"
+        android:label="Update Purchase Voucher"
+        tools:layout="@layout/fragment_update_purchase" >
+        <action
+            android:id="@+id/action_updatePurchaseFragment_to_nav_purchase"
+            app:destination="@id/nav_purchase" />
+        <argument
+            android:name="currentPurchase"
+            app:argType="com.tmw.mypos.model.Purchase" />
+    </fragment>
+
+</navigation>

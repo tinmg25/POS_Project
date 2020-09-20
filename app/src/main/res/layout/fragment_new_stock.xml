@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.Stock.NewStockFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Code"
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/etd_code"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="code"
+            android:textSize="20sp" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Stock Name"
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/etd_stock"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="stock_name"
+            android:textSize="20sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Purchase Price"
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/etd_pur_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="pur_price"
+            android:textSize="20sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sale Price"
+            android:textSize="20sp"/>
+
+        <EditText
+            android:id="@+id/etd_sale_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="sale_price"
+            android:textSize="20sp"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/btn_Save"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Save"
+            android:textSize="20sp"
+            android:textColor="#FF5722"
+            android:background="@android:color/holo_blue_dark"
+            android:layout_marginLeft="300dp"/>
+    </LinearLayout>
+</LinearLayout>
